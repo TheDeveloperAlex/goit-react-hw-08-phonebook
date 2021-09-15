@@ -1,18 +1,14 @@
-
-
-
 .nav {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .link {
-    color: black;
-    font-size: 25px;
-    text-decoration: none;
+  color: black;
+  font-size: 30px;
+  text-decoration: none;
 }
 
 .activeLink {
-    color: blue;
+  color: rgba(25, 200, 30, 1);
 }
-

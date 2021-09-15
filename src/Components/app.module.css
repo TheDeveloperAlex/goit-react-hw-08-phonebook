@@ -1,8 +1,10 @@
 .section {
   /* margin: 0 auto; */
-   width: 800px; 
+  /* width: 100vh;
+   */
+  /* height: 100%; */
   background-color: darkcyan;
   padding-left: 20px;
   padding-right: 20px;
-
-} 
+  padding-bottom: 10px;
+}

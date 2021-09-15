@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import authOperation from "redux/contacts-operation";
 
+import s from './FormRegister.module.css'
 
 
 const FormRegister = ({ buttonRegisterName }) => {
@@ -37,9 +38,9 @@ const FormRegister = ({ buttonRegisterName }) => {
         // }
         console.log( name, email, password);
         dispatch(authOperation.register({ name, email, password }));
-        setname('');
-        setEmail('');
-        setpassword('');
+        // setname('');
+        // setEmail('');
+        // setpassword('');
 
     }
 
@@ -48,21 +49,22 @@ const FormRegister = ({ buttonRegisterName }) => {
     // }
     return (
             <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={s.form}>
                     <label>
-                        <p>Name</p>
+                    <p className={s.discrib}>Name</p>
                         <input
-                            type="text"
-                            name="name"
-                            onChange={handleNameChange}
-                            id="name"
-                            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-                            // title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
-                            required
+                        type="text"
+                        name="name"
+                        onChange={handleNameChange}
+                        id="name"
+                        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+                        // title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
+                        required
+                        className={s.input}
                         />
                     </label>
                     <label>
-                        <p>Email</p>
+                        <p className={s.discrib}>Email</p>
                         <input
                             type="email"
                             name="email"
@@ -70,11 +72,12 @@ const FormRegister = ({ buttonRegisterName }) => {
                             id="name"
                             // pattern="^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$"
                             // title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
-                            required
+                        required
+                        className={s.input}
                         />
                     </label>
                     <label>
-                        <p>Password</p>
+                        <p className={s.discrib}>Password</p>
                         <input
                             // className={s.inputTel}
                             type="password"
@@ -83,10 +86,11 @@ const FormRegister = ({ buttonRegisterName }) => {
                             id="password"
                             // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                             // title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
-                            required
+                        required
+                        className={s.input}
                         />
-                    </label>
-                <button type="submit">{ buttonRegisterName } </button>
+                </label>
+                <button type="submit" className={s.button}>{ buttonRegisterName } </button>
                 </form>
             </div>
     );

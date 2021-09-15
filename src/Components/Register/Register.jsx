@@ -4,7 +4,7 @@ import FormRegister from '../Forms/FormRegister/FormRegister';
 const Register = () => {
     return (
         <div>
-            <h2>Register</h2>
+            {/* <h2>Register</h2> */}
             <FormRegister buttonRegisterName='Registration' />
         </div>
     );

@@ -26,3 +26,31 @@ ul {
   padding-left: 20px;
   margin: 0;
 }
+
+.filterDiv {
+  /* display: flex; */
+  position: relative;
+}
+
+.searchContainer {
+  position: absolute;
+  top: 5px;
+  left: 3px;
+}
+
+.input {
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 10px;
+  padding-left: 24px;
+}
+
+.discrib {
+  font-size: 20px;
+}
+
+.mainConteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
